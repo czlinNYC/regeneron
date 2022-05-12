@@ -1,0 +1,13 @@
+version: '3'
+services:
+  pg:
+    image: "postgres:12"
+    container_name: "postgres"
+    ports:
+      - "5444:5432"
+    volumes:
+      - ./pg/db_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=regeneron
+      - POSTGRES_USER=regeneron
+      - POSTGRES_PASSWORD=password
