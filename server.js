@@ -6,8 +6,7 @@ const express = require("express");
 const path = require("path");
 (async () => {
   const raw = await knex.raw(`SELECT *
-  FROM pg_settings
-  WHERE name = 'port';`);
+  FROM "medicalConcepts";`);
   console.log(raw.rows);
 })();
 const PORT = process.env.PORT || 3999;
